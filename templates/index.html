@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>  
+    <title>Project - Global Warning</title>
+
+  <!--Plotly-->  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--D3 cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+  </head>
+<body style="overflow-y: hidden   ">
+    <!-- Image and text -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../static/media/globe.gif" width="30" height="30" class="d-inline-block align-top" alt="">
+        Project-Global Warning
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+   
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./map.html">Global Co2 Levels</a>
+                <a class="dropdown-item" href="./gases.html">Top 20 Countries(by Co2 Emission)</a>
+                <a class="dropdown-item" href="./sealevel.html">Sea-Levels & Tempratures</a>
+              </div>
+            </li>
+        </div>
+      </div> 
+      <div style="float: right">
+          <a class="nextPage" href="#"> <i class="fa fa-2x fa-angle-double-left"></i></a>
+         <a class="nextPage" href="map.html"> <i class="fa fa-2x fa-angle-double-right"></i></a>
+      </div>
+  </nav>
+  
+  <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="../static/media/climate.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-left align-items-left">
+        <div class="w-100 text-white">
+            
+          <h5 class="display-4">Climate Changes</h5>
+          <p class="lead mb-0">The Earth's climate has changed throughout history. 
+            Just in the last 650,000 years there have been seven cycles of glacial 
+            advance and retreat, with the abrupt end of the last ice age about 7,000 years 
+            ago marking the beginning of the modern climate era — and of human civilization.
+            </p>
+          <p  class="lead mb-0">
+              <strong style="color:red; background-color: rgb(235, 243, 198)">Ninety-seven percent</strong> of climate scientists agree that climate-warming trends 
+              over the past century are extremely likely due to <strong style="color:red; background-color: rgb(235, 243, 198)">human activities</strong> ,
+               and most of the leading scientific organizations worldwide have issued
+                public statements endorsing this position.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Copyright coding bootcamp 2019</span>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
