@@ -49,7 +49,7 @@ def html_lookup(page):
 
 @app.route("/map")
 def get_map_data():
-    global_temp_country = pd.read_csv('./static/resources/GlobalLandTemperaturesByCountry.csv')
+    global_temp_country = pd.read_csv('project_climate_changes/static/resources/GlobalLandTemperaturesByCountry.csv')
     global_temp_country_clear = global_temp_country[~global_temp_country['Country'].isin(
     ['Denmark', 'Antarctica', 'France', 'Europe', 'Netherlands',
         'United Kingdom', 'Africa', 'South America'])]
@@ -68,7 +68,7 @@ def get_map_data():
 
 @app.route("/sealevel")
 def get_sea_levels():
-    var_sealevels = pd.read_csv('./static/resources/seaLevelData.csv')
+    var_sealevels = pd.read_csv('project_climate_changes/static/resources/seaLevelData.csv')
     var_sealevels = var_sealevels[['year', 'CSIRO_sea_level', 
     'CSIRO - Lower error bound (inches)',
        'CSIRO - Upper error bound (inches)']]
@@ -82,9 +82,14 @@ def get_sea_levels():
     }
     return jsonify(var_out)
 
+
+@app.route("/path")
+def get_path():
+    return os.path.join(app.instance_path, 'dineshr', 'my_file.txt')
+
 @app.route("/meanTemp")
 def get_mean_temp():
-    global_temp = pd.read_csv("./static/resources/GlobalTemperatures.csv")
+    global_temp = pd.read_csv("project_climate_changes/static/resources/GlobalTemperatures.csv")
     years = np.unique(global_temp['dt'].apply(lambda x: x[:4]))
     mean_temp_world = []
     mean_temp_world_upper = []
