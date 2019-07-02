@@ -102,9 +102,6 @@ def get_mean_temp():
     }
     return jsonify(var_out)
 
-@app.route("/meanTemp")
-def get_path():
-    return os.path()
 
 if __name__ == "__main__":
     app.run()
